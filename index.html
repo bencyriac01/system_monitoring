@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber System Monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="background">
+        <div class="gradient-glow glow-1"></div>
+        <div class="gradient-glow glow-2"></div>
+        <div class="particle-field" id="particles"></div>
+    </div>
+
+    <main class="dashboard-shell">
+        <section class="monitor-card" aria-label="System hardware monitor">
+            <div class="card-header">
+                <div class="title-group">
+                    <div class="title-icon">🖥️</div>
+                    <div>
+                        <h1>System Monitor</h1>
+                        <p>Real-Time Hardware Information</p>
+                    </div>
+                </div>
+                <div class="live-pill" aria-live="polite">
+                    <span class="live-dot"></span>
+                    ONLINE
+                </div>
+            </div>
+
+            <div class="summary-grid">
+                <article class="summary-card">
+                    <div>
+                        <span class="summary-label">CPU</span>
+                        <strong id="summary-cpu">Loading…</strong>
+                    </div>
+                </article>
+                <article class="summary-card">
+                    <div>
+                        <span class="summary-label">Memory</span>
+                        <strong id="summary-memory">Loading…</strong>
+                    </div>
+                </article>
+                <article class="summary-card">
+                    <div>
+                        <span class="summary-label">GPU</span>
+                        <strong id="summary-gpu">Loading…</strong>
+                    </div>
+                </article>
+                <article class="summary-card">
+                    <div>
+                        <span class="summary-label">OS</span>
+                        <strong id="summary-os">Loading…</strong>
+                    </div>
+                </article>
+            </div>
+
+            <div class="stats-grid">
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-icon">🧠</div>
+                        <div>
+                            <h2>CPU</h2>
+                            <p>Processor summary</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="metric-list">
+                            <div class="metric"><span>Platform</span><strong id="cpu-platform">Loading…</strong></div>
+                            <div class="metric"><span>Architecture</span><strong id="cpu-architecture">Loading…</strong>
+                            </div>
+                            <div class="metric"><span>Logical Cores</span><strong id="cpu-logical">Loading…</strong>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-icon">🎮</div>
+                        <div>
+                            <h2>GPU</h2>
+                            <p>Graphics summary</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="metric-list">
+                            <div class="metric"><span>GPU Name</span><strong id="gpu-name">Loading…</strong></div>
+                            <div class="metric"><span>Manufacturer</span><strong id="gpu-manufacturer">Loading…</strong>
+                            </div>
+                            <div class="metric"><span>Driver Version</span><strong id="gpu-driver">Loading…</strong>
+                            </div>
+                            <div class="metric"><span>OpenGL</span><strong id="gpu-opengl">Loading…</strong></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-icon">💾</div>
+                        <div>
+                            <h2>RAM</h2>
+                            <p>Memory summary</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="metric-list compact">
+                            <div class="metric"><span>Installed RAM</span><strong id="ram-installed">Loading…</strong>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-icon">🪟</div>
+                        <div>
+                            <h2>OS</h2>
+                            <p>System summary</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="metric-list">
+                            <div class="metric"><span>OS Name</span><strong id="os-name">Loading…</strong></div>
+                            <div class="metric"><span>Version</span><strong id="os-version">Loading…</strong></div>
+                            <div class="metric"><span>Architecture</span><strong id="os-arch">Loading…</strong></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
